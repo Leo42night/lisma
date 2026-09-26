@@ -1,0 +1,188 @@
+@import "tailwindcss";
+/* =========================================================
+   THEME TOKENS
+   ========================================================= */
+
+@theme {
+  /* -------------------------------------------------------
+     Font
+     ------------------------------------------------------- */
+
+  --font-sans: "Montserrat", sans-serif;
+  --font-display: "Montserrat", sans-serif;
+
+
+  /* -------------------------------------------------------
+     LISMA Brand Colors
+     ------------------------------------------------------- */
+
+  --color-lisma-navy: #0B2A66;
+  --color-lisma-blue: #0264D9;
+  --color-lisma-blue-dark: #0243CE;
+  --color-lisma-yellow: #FBEE31;
+  --color-lisma-red: #E0142F;
+  --color-lisma-cyan: #4BC6FB;
+  --color-lisma-white: #FFFFFF;
+
+
+  /* -------------------------------------------------------
+     Typography Tracking
+     ------------------------------------------------------- */
+
+  --tracking-lisma: -0.035em;
+  --tracking-lisma-tight: -0.05em;
+  --tracking-lisma-wide: 0.08em;
+}
+
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+:root {
+  /* Background */
+  --background: #FFFFFF;
+  --foreground: #0B2A66;
+
+  /* Primary */
+  --primary: #0264D9;
+  --primary-foreground: #FFFFFF;
+
+  /* Secondary */
+  --secondary: #0243CE;
+  --secondary-foreground: #FFFFFF;
+
+  /* Accent */
+  --accent: #FBEE31;
+  --accent-foreground: #0B2A66;
+
+  /* Destructive */
+  --destructive: #E0142F;
+  --destructive-foreground: #FFFFFF;
+
+  /* Muted */
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+
+  /* Border / Input */
+  --border: #DCE6F2;
+  --input: #DCE6F2;
+  --ring: #0264D9;
+
+  /* Cards */
+  --card: #FFFFFF;
+  --card-foreground: #0B2A66;
+
+  /* Popover */
+  --popover: #FFFFFF;
+  --popover-foreground: #0B2A66;
+}
+
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+/* Beritahu Tailwind v4 untuk mengaktifkan mode gelap HANYA jika ada kelas .dark di parent */
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+  /* Background */
+  --background: #071A3D;
+  --foreground: #F8FAFC;
+
+  /* Primary */
+  --primary: #4BC6FB;
+  --primary-foreground: #071A3D;
+
+  /* Secondary */
+  --secondary: #0264D9;
+  --secondary-foreground: #FFFFFF;
+
+  /* Accent */
+  --accent: #FBEE31;
+  --accent-foreground: #071A3D;
+
+  /* Destructive */
+  --destructive: #E0142F;
+  --destructive-foreground: #FFFFFF;
+
+  /* Muted */
+  --muted: #102A55;
+  --muted-foreground: #A8B6CC;
+
+  /* Border / Input */
+  --border: #1D4275;
+  --input: #1D4275;
+  --ring: #4BC6FB;
+
+  /* Cards */
+  --card: #0B2450;
+  --card-foreground: #F8FAFC;
+
+  /* Popover */
+  --popover: #0B2450;
+  --popover-foreground: #F8FAFC;
+}
+
+
+/* =========================================================
+   MAP CSS VARIABLES → TAILWIND UTILITIES
+   ========================================================= */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif;
+  }
+}
