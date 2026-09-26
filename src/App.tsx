@@ -7,6 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 // Internal
 import Home from './pages/Home';
 import Program from './pages/Program';
+import Single from './pages/Single';
 import Kalender from './pages/Kalender';
 import Dokumentasi from './pages/Dokumentasi';
 import Navbar from './components/Navbar';
@@ -22,6 +23,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/program" element={<Program />} />
+        <Route path="/berita" element={<Single />} />
         <Route path="/kalender" element={<Kalender />} />
         <Route path="/dokumentasi" element={<Dokumentasi />} />
 
