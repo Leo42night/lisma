@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "bun run --watch src/index.ts",
-    "build": "tsdown",
+    "build": "bunx prisma generate && tsdown",
+    "postinstall": "bunx prisma generate",
     "start": "bun run src/index.ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev --name init",
