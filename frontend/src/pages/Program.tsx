@@ -38,7 +38,7 @@ const publicationsData: Publication[] = [
     {
         id: 3,
         title: 'Studi Etnobotani Tumbuhan Obat Tradisional oleh Masyarakat Lokal Kalimantan Barat',
-        category: 'Jurnal Sinta 2',
+        category: 'Jurnal Sinta 3',
         date: '28 Nov 2025',
         author: 'Tim Bionalar LISMA',
         imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
