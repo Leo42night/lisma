@@ -5,8 +5,21 @@ import type { ReactElement } from "react";
  * Pakai data dummy dulu
  * Nanti akan pakai akses data dari DB, fitur CRUD sedang dibuat.
  */
-
-const artikel = {
+interface Artikel {
+    kategori: string;
+    judul: string;
+    ringkasan: string;
+    penulis: string;
+    tanggal: string;
+    waktuBaca: string;
+    lokasi?: string;
+    jadwal?: string;
+    pembicara?: string;
+    paragraf: string[];
+    kutipan: string;
+    kutipanSumber: string;
+}
+const artikel: Artikel = {
     kategori: "Kegiatan Organisasi",
     judul: "Workshop Penelitian Mahasiswa: Merancang Riset yang Berdampak",
     ringkasan:
@@ -42,28 +55,6 @@ const beritaTerkait = [
         tanggal: "25 Agustus 2026",
     },
 ];
-
-function LogoMark(): ReactElement {
-    return (
-        <div className="flex items-center gap-2.5">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-                <rect width="30" height="30" rx="7" className="fill-primary" />
-                <path
-                    d="M8 20V10h3.2l3.3 6.4L17.8 10H21v10h-2.6v-6.3l-2.9 5.6h-2.1l-2.9-5.6V20H8Z"
-                    className="fill-primary-foreground"
-                />
-            </svg>
-            <div className="leading-tight">
-                <p className="text-[13px] font-bold tracking-lisma-tight text-foreground">
-                    LISMA
-                </p>
-                <p className="text-[10px] tracking-lisma-wide uppercase text-muted-foreground">
-                    Universitas Tanjungpura
-                </p>
-            </div>
-        </div>
-    );
-}
 
 function HeroGrafis(): ReactElement {
     return (

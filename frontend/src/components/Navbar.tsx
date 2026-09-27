@@ -6,6 +6,7 @@ import DarkModeToggle from "./DarkModeToggle";
 const NAV_LINKS = [
     { to: "/#about", label: "Tentang", exact: false, isAnchor: true },
     { to: "/program", label: "Program", exact: false },
+    { to: "/sample", label: "Sample", exact: false },
     { to: "/berita", label: "Berita", exact: false },
     { to: "/kalender", label: "Kalender", exact: false },
     { to: "/dokumentasi", label: "Dokumentasi", exact: false },

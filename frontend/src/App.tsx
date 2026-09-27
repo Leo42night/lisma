@@ -7,9 +7,12 @@ import { FaInstagram } from "react-icons/fa";
 // Internal
 import Home from './pages/Home';
 import Program from './pages/Program';
-import Single from './pages/Single';
 import Kalender from './pages/Kalender';
 import Dokumentasi from './pages/Dokumentasi';
+import Single from './pages/Single';
+import ArticleList from './pages/ArticleList';
+import ArticleDetail from './pages/ArticleDetail';
+import ArticleForm from './pages/ArticleForm';
 import Navbar from './components/Navbar';
 import { MapModal } from './components/MapModal';
 
@@ -23,9 +26,13 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/program" element={<Program />} />
-        <Route path="/berita" element={<Single />} />
         <Route path="/kalender" element={<Kalender />} />
         <Route path="/dokumentasi" element={<Dokumentasi />} />
+        <Route path="/sample" element={<Single />} />
+        <Route path="/berita" element={<ArticleList />} />
+        <Route path="/berita/new" element={<ArticleForm />} />
+        <Route path="/berita/:id" element={<ArticleDetail />} />
+        <Route path="/berita/:id/edit" element={<ArticleForm />} />
 
         {/* Fallback 404 Route */}
         <Route

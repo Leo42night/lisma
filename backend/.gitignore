@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.env.prod
+dev.db
+/prisma/migrations
+/src/generated
+.agents
+.claude
+.windsurf
+*.sql
