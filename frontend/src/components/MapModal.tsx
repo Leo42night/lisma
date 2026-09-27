@@ -26,7 +26,7 @@ function MapEventsHandler({ onSelectPosition }: { onSelectPosition: (latlng: L.L
 }
 
 export function MapModal() {
-  const defaultPosition: [number, number] = [-6.2088, 106.8456];
+  const defaultPosition: [number, number] = [-0.053977, 109.349761];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCoords, setSelectedCoords] = useState<{ lat: number; lng: number }>({

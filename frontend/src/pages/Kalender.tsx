@@ -114,7 +114,9 @@ function extractEventKind(description?: string): { kind: string | null; rest: st
     if (!description) return { kind: null, rest: "" };
 
     const trimmed = description.replace(/^\s+/, "");
-    const match = trimmed.toLowerCase().match(/^type:\s*([^\n]*)\n?/);
+    const match = trimmed
+        .toLowerCase()
+        .match(/^type:\s*([^\n]*?)(?:\n|<br\s*\/?>|$)/i);
     if (!match) return { kind: null, rest: description };
 
     const kind = match[1].trim();
